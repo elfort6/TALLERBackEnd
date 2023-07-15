@@ -2,14 +2,15 @@ import {inject} from '@loopback/core';
 import { Soap, executeAddResponse, executeSubtractResponse } from '../services';
 import { getModelSchemaRef, post, requestBody, response } from '@loopback/rest';
 import { Consulta } from '../models';
+import { authenticate } from '@loopback/authentication';
 
-
+@authenticate('keyCloak','keyCloakAdmin')
 export class CalculadoraController {
   constructor(
     @inject('services.Soap')
     protected soap:Soap,
   ) {}
-
+  
   @post('/suma')
   @response(200,{
     description:'funcion de suma',
@@ -25,6 +26,7 @@ export class CalculadoraController {
     return this.soap.Add({a:consulta.a,b:consulta.b})
   }
 
+  @authenticate('keyCloakAdmin')
   @post('/resta')
   @response(200,{
     description:'funcion de resta',

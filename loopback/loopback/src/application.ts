@@ -1,5 +1,5 @@
 import {BootMixin} from '@loopback/boot';
-import {ApplicationConfig} from '@loopback/core';
+import {ApplicationConfig, createBindingFromClass} from '@loopback/core';
 import {
   RestExplorerBindings,
   RestExplorerComponent,
@@ -9,6 +9,10 @@ import {RestApplication} from '@loopback/rest';
 import {ServiceMixin} from '@loopback/service-proxy';
 import path from 'path';
 import {MySequence} from './sequence';
+import { JwtAuthSpecEnhancer } from './my-spec';
+import { keyCloakStrategy } from './strategies';
+import { AuthenticationComponent, registerAuthenticationStrategy } from '@loopback/authentication';
+import { keyCloakAdminStrategy } from './strategies/keycloakAdmin.strategy';
 
 export {ApplicationConfig};
 
@@ -40,5 +44,10 @@ export class LoopbackApplication extends BootMixin(
         nested: true,
       },
     };
+
+    registerAuthenticationStrategy(this,keyCloakStrategy)
+    registerAuthenticationStrategy(this,keyCloakAdminStrategy)
+    this.component(AuthenticationComponent)
+    this.add(createBindingFromClass(JwtAuthSpecEnhancer))
   }
 }

@@ -1,11 +1,13 @@
 import {inject, lifeCycleObserver, LifeCycleObserver} from '@loopback/core';
 import {juggler} from '@loopback/repository';
+import * as dotenv from "dotenv";
+dotenv.config()
 
 const config = {
   name: 'soap',
   connector: 'soap',
-  url: 'https://ecs.syr.edu/faculty/fawcett/Handouts/cse775/code/calcWebService/Calc.asmx',
-  wsdl: 'https://ecs.syr.edu/faculty/fawcett/Handouts/cse775/code/calcWebService/Calc.asmx?wsdl',
+  url: process.env.SOAP_ENDPOINT,
+  wsdl: process.env.SOAP_ENDPOINT+'?wsdl',
   remotingEnabled: true,
   operations: {
     Add: {
