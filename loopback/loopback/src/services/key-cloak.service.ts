@@ -1,7 +1,7 @@
-import { injectable, /* inject, */ BindingScope } from '@loopback/core';
+import {injectable, /* inject, */ BindingScope} from '@loopback/core';
 import axios from 'axios';
 
-@injectable({ scope: BindingScope.TRANSIENT })
+@injectable({scope: BindingScope.TRANSIENT})
 export class KeyCloakService {
   constructor(/* Add @inject to inject parameters */) { }
 
@@ -20,7 +20,7 @@ export class KeyCloakService {
         params,
         {
           headers:
-            { 'Content-Type': 'application/x-www-form-urlencoded' }
+            {'Content-Type': 'application/x-www-form-urlencoded'}
         }
       );
       respuesta = keycloakResponse.data;
@@ -47,7 +47,7 @@ export class KeyCloakService {
         params,
         {
           headers:
-            { 'Content-Type': 'application/x-www-form-urlencoded' }
+            {'Content-Type': 'application/x-www-form-urlencoded'}
         }
       );
 
@@ -58,6 +58,7 @@ export class KeyCloakService {
       }
 
     } catch (error) {
+      console.log(error)
       return {
         status: "error",
         type: "login fail",
@@ -81,10 +82,10 @@ export class KeyCloakService {
         params,
         {
           headers:
-            { 'Content-Type': 'application/x-www-form-urlencoded' }
+            {'Content-Type': 'application/x-www-form-urlencoded'}
         }
       );
-      return { Token: keycloakResponse.data.access_token };
+      return {Token: keycloakResponse.data.access_token};
     } catch (error) {
       return {
         status: "error",
