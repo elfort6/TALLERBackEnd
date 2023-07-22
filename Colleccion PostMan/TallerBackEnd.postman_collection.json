@@ -1,0 +1,806 @@
+{
+	"info": {
+		"_postman_id": "b51ae100-757f-4f8b-8c7d-a777020c3627",
+		"name": "TallerBackEnd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16973005",
+		"_collection_link": "https://elfort6.postman.co/workspace/OviTeam~31afbf84-b6ba-4846-872e-0f725bb41da9/collection/16973005-b51ae100-757f-4f8b-8c7d-a777020c3627?action=share&creator=16973005&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Calculadora",
+			"item": [
+				{
+					"name": "Suma",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{keycloakToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"a\": 0,\r\n    \"b\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostCalculadora}}/suma",
+							"host": [
+								"{{hostCalculadora}}"
+							],
+							"path": [
+								"suma"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Suma",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"a\": 0,\r\n    \"b\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/suma",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"suma"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Jul 2023 14:52:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "377"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"AddResult\": 0\n    },\n    \"envelope\": \"<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?><soap:Envelope xmlns:soap=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\" xmlns:xsd=\\\"http://www.w3.org/2001/XMLSchema\\\"><soap:Body><AddResponse xmlns=\\\"http://tempuri.org/\\\"><AddResult>0</AddResult></AddResponse></soap:Body></soap:Envelope>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Resta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{keycloakToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"a\": 0,\r\n    \"b\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostCalculadora}}/resta",
+							"host": [
+								"{{hostCalculadora}}"
+							],
+							"path": [
+								"resta"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Resta",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"a\": 0,\r\n    \"b\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/resta",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"resta"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Jul 2023 14:52:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "402"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"SubtractResult\": 0\n    },\n    \"envelope\": \"<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?><soap:Envelope xmlns:soap=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\" xmlns:xsd=\\\"http://www.w3.org/2001/XMLSchema\\\"><soap:Body><SubtractResponse xmlns=\\\"http://tempuri.org/\\\"><SubtractResult>0</SubtractResult></SubtractResponse></soap:Body></soap:Envelope>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "iniciar sesion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status test\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    var jsonData = JSON.parse(responseBody);\r",
+									"    pm.collectionVariables.set(\"refresh_token\", jsonData.refresh_token);\r",
+									"    pm.collectionVariables.set(\"keycloakToken\", jsonData.toke);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"usuario\": \"user\",\r\n  \"clave\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostOuth}}/user/login",
+							"host": [
+								"{{hostOuth}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"usuario\": \"user\",\r\n  \"clave\": \"user\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/user/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Jul 2023 14:52:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2117"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"toke\": \"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJfUmw5WXAyMlhJQWN0a2JGRkhEOXZfdEh6a3BGMjRBRURsNkw1ME9RRWJJIn0.eyJleHAiOjE2OTAwMzc4MjMsImlhdCI6MTY5MDAzNzUyMywianRpIjoiOGNhMDQ0NjItYzhlMy00YzgwLThiYmQtNzhhZDQ2YWE3MDRmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy90YWxsZXItYmFja2VuZCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI2OThlNjM1MC1jYjJhLTQwMzItODI3ZS03ZTRlYjVjN2FkYWUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJjbGllbnRlLWJhY2tlbmQiLCJzZXNzaW9uX3N0YXRlIjoiMTE1OWFlMjktODYzYi00MjM4LWJjNTQtZmVlY2Y5ODk2MWIxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRhbGxlci1iYWNrZW5kIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJjbGllbnRlLWJhY2tlbmQiOnsicm9sZXMiOlsidXN1YXJpbyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiMTE1OWFlMjktODYzYi00MjM4LWJjNTQtZmVlY2Y5ODk2MWIxIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIifQ.bqZ3zXXk46GpmanrQXP2FfeM1slrmWdOdyOydIuC-nqm6y3DlRKazQZBkzNMd0n8WlevlKTwUzl2taleDVlx-ydDjBFB3mvwhTeFVZH9VZjVJlkN2siCRNqCVJ1T6cDq3pG_HEFyeFjleB1EN2zXgDNBUeK3BwYEaU1df0R_pqBCJ6g2jC7eM6yDEe45Tz5Gus6HHgJB3VqF7WWhNQWXVKquC0YQLtVG0p-YLwC_vYmf4w0IRYh9XPQLRHpFE8CWLC2MYA9V-EIe9T4-k2CLmCMDBcTyeqkW5vqwURdOeksS3rM1V5weEIKvXw1bEwnKa-VQhO2ymn2YRM9A4RspYw\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIyZjQwM2Y1ZC1mYTY4LTQ4MzMtYTU2Zi05NDMzNzNkYTRmNjMifQ.eyJleHAiOjE2OTAwMzkzMjMsImlhdCI6MTY5MDAzNzUyMywianRpIjoiOTMwNTE0ODEtY2Y0ZC00MTc5LWI4NGYtZjMzOWI5NjdhOWI0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy90YWxsZXItYmFja2VuZCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9yZWFsbXMvdGFsbGVyLWJhY2tlbmQiLCJzdWIiOiI2OThlNjM1MC1jYjJhLTQwMzItODI3ZS03ZTRlYjVjN2FkYWUiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoiY2xpZW50ZS1iYWNrZW5kIiwic2Vzc2lvbl9zdGF0ZSI6IjExNTlhZTI5LTg2M2ItNDIzOC1iYzU0LWZlZWNmOTg5NjFiMSIsInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjExNTlhZTI5LTg2M2ItNDIzOC1iYzU0LWZlZWNmOTg5NjFiMSJ9.RnXAz4jx6hgZVlWfcwJRh9jN9Uang-l7PPql5PnrbLU\"\n}"
+						}
+					]
+				},
+				{
+					"name": "cerrar sesion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"refreshToke\": \"{{refresh_token}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostOuth}}/user/logout",
+							"host": [
+								"{{hostOuth}}"
+							],
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "cerrar sesion",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"refreshToke\": \"{{refresh_token}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/user/logout",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Jul 2023 14:52:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Tareas",
+			"item": [
+				{
+					"name": "Obtener tareas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostTareas}}/tareas",
+							"host": [
+								"{{hostTareas}}"
+							],
+							"path": [
+								"tareas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/tareas",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"tareas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Jul 2023 14:51:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "745"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"nombre\": \"string\",\n        \"id\": \"64a97fedc3a51148041e2e36\",\n        \"descripcion\": \"string\",\n        \"estado\": \"string\",\n        \"prioridad\": \"string\"\n    },\n    {\n        \"nombre\": \"string2\",\n        \"id\": \"64a98095c3a51148041e2e37\",\n        \"descripcion\": \"string2\",\n        \"estado\": \"no iniciada\",\n        \"prioridad\": \"baja\"\n    },\n    {\n        \"nombre\": \"string2\",\n        \"id\": \"64a980d8c3a51148041e2e38\",\n        \"descripcion\": \"asd32\",\n        \"estado\": \"no iniciada\",\n        \"prioridad\": \"baja\"\n    },\n    {\n        \"nombre\": \"tare2\",\n        \"id\": \"64bbebd51c96f32ea44b1f7f\",\n        \"descripcion\": \"asd123asd\",\n        \"estado\": \"no iniciada\",\n        \"prioridad\": \"alta\",\n        \"cerateAt\": \"2023-07-22T14:46:45.692Z\",\n        \"modifiedAt\": \"2023-07-22T14:46:45.692Z\"\n    },\n    {\n        \"nombre\": \"tare2\",\n        \"id\": \"64bbecdc1c96f32ea44b1f80\",\n        \"descripcion\": \"asd123asd\",\n        \"estado\": \"no iniciada\",\n        \"prioridad\": \"alta\",\n        \"cerateAt\": \"2023-07-22T14:51:08.373Z\",\n        \"modifiedAt\": \"2023-07-22T14:51:08.373Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Obtener tarea",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostTareas}}/tareas/64bbecdc1c96f32ea44b1f80",
+							"host": [
+								"{{hostTareas}}"
+							],
+							"path": [
+								"tareas",
+								"64bbecdc1c96f32ea44b1f80"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Obtener tareas Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}//tareas/64a981eb6b62b65f7c9094e0",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"",
+										"tareas",
+										"64a981eb6b62b65f7c9094e0"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Jul 2023 14:51:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "143"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"statusCode\": 404,\n        \"name\": \"Error\",\n        \"message\": \"Entity not found: Tareas with id \\\"64a981eb6b62b65f7c9094e0\\\"\",\n        \"code\": \"ENTITY_NOT_FOUND\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar Tarea",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/tareas/64a981eb6b62b65f7c9094e0",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tareas",
+								"64a981eb6b62b65f7c9094e0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/tareas/64a981eb6b62b65f7c9094e0",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"tareas",
+										"64a981eb6b62b65f7c9094e0"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Jul 2023 14:51:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "143"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"statusCode\": 404,\n        \"name\": \"Error\",\n        \"message\": \"Entity not found: Tareas with id \\\"64a981eb6b62b65f7c9094e0\\\"\",\n        \"code\": \"ENTITY_NOT_FOUND\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "crear Tarea",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"tare2\",\r\n    \"descripcion\": \"asd123asd\",\r\n    \"prioridad\":\"alta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostTareas}}/tareas",
+							"host": [
+								"{{hostTareas}}"
+							],
+							"path": [
+								"tareas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"tare2\",\r\n    \"descripcion\": \"asd123asd\",\r\n    \"prioridad\":\"alta\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/tareas",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"tareas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Jul 2023 14:51:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "196"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nombre\": \"tare2\",\n    \"id\": \"64bbecdc1c96f32ea44b1f80\",\n    \"descripcion\": \"asd123asd\",\n    \"estado\": \"no iniciada\",\n    \"prioridad\": \"alta\",\n    \"cerateAt\": \"2023-07-22T14:51:08.373Z\",\n    \"modifiedAt\": \"2023-07-22T14:51:08.373Z\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:3000/",
+			"type": "string"
+		},
+		{
+			"key": "keycloakToken",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "refresh_token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "hostOuth",
+			"value": "http://localhost:3000/",
+			"type": "string"
+		},
+		{
+			"key": "hostCalculadora",
+			"value": "http://localhost:3001/",
+			"type": "string"
+		},
+		{
+			"key": "hostTareas",
+			"value": "http://localhost:3002/",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,28 @@
+version: '3.3'
+
+services:
+  outh:
+    image: mi-outh:lastest
+    container_name: outh
+    build:
+      context: ./Outh
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+  calculadora:
+    image: mi-calculadora:lastest
+    container_name: calculadora
+    build:
+      context: ./Calculadora
+      dockerfile: Dockerfile
+    ports:
+      - 3001:3000
+  tareas:
+    image: mis-tareas:lastest
+    container_name: tareas
+    build:
+      context: ./Tareas
+      dockerfile: Dockerfile
+    ports:
+      - 3002:3000
+  
